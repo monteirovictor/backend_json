@@ -17,7 +17,7 @@ const getUsers = ()=>{
 const saveUser = (users) => fs.writeFileSync(filePath, JSON.stringify(users,null,'\t'))
 
 const userRoute = (app)=>{
-    
+
     app.route('/users/:id?')
         .get((req,res)=>{
             const users = getUsers()
@@ -31,7 +31,12 @@ const userRoute = (app)=>{
             users.push(res.body)
 
             saveUser(users)
-            res.send({users})
+            res.status(201).send('OK')
+        })
+
+        //update
+        .put((req,res)=>{
+
         })
 }
 
