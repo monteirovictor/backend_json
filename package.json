@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node node_modules/nodemon/bin/nodemon bin/server"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/monteirovictor/gym_backend.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -17,6 +18,10 @@
   },
   "homepage": "https://github.com/monteirovictor/gym_backend#readme",
   "dependencies": {
+    "debug": "^4.3.2",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
   }
 }
